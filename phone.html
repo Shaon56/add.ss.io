@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone</title>
+    <link rel="stylesheet" href="phone.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="logo.png">
+            </div>
+            <div class="nav-link">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="https://www.samsung.com/uk/smartphones/galaxy-m/galaxy-m53-5g-green-128gb-sm-m536bzggeub/">Phone</a></li>
+                    <li><a href="https://www.pickaboo.com/mobile-accessories.html">Accesoris</a></li>
+                    <li><a href="https://www.amazon.in/Samsung-Mystique-Storage-Purchased-Separately/dp/B09XJ48QPR?th=1">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="mobile.png" class="mobile">
+            <div id="circle"> 
+                <div class="feature one">
+                    <img src="display.png">
+                    <div>
+                        <h1>Display</h1>
+                        <p>6.7inch display</p>
+                        <p>Super AMOLED Plus Touchscreen </p>
+                        <p>Refresh rate</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="camera.png">
+                    <div>
+                       <h1>Camera</h1>
+                       <p>Quad 108+8+2+2 Megapixel</p>
+                       <P>Ultra HD 4K (2160p), gyro-EIS (1080p)</P>
+                       <P>Front Camera 32 Megapixel</P>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="processor.png">
+                    <div>
+                       <h1>Processor</h1>
+                       <p>Octa-core, 2.4 GHz processor</p>
+                       <P>MediaTek Dimensity 900 (6 nm)</P>
+                       <P>Mali-G68 MC4</P>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="battery.png">
+                    <div>
+                       <h1>Battery</h1>
+                       <p>Lithium-polymer 5000 mAh (non-removable)</p>
+                       <P>25W Fast Charging</P>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="control">
+            <img src="arrow.png" id="upBtn">
+            <h3>Feature</h3>
+            <img src="arrow.png" id="downBtn">
+        </div>
+    </div>
+
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upBtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(-90deg)"
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        downBtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(90deg)"
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+</body>
+</html>
